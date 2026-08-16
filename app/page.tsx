@@ -36,34 +36,44 @@ function Arrow() { return <span aria-hidden>→</span>; }
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <div className="container nav-wrap">
-          <a className="brand" href="#top" aria-label="Batara Project">
-  <div className="brand-mark">
-  <img
-    src="/logo-batara.jpg"
-    alt="Batara Project"
-    style={{
-      width: "42px",
-      height: "42px",
-      objectFit: "contain",
-      borderRadius: "50%",
-      display: "block",
-    }}
-  />
-</div>
-            <span><strong>BATARA PROJECT</strong><small>Partner Digital untuk Pengembangan Usaha</small></span>
-          </a>
-          <nav className="nav-links">
-            <a className="active" href="#top">Beranda</a>
-            <a href="#layanan">Layanan</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#tentang">Tentang Kami</a>
-            <a href="#kontak">Kontak</a>
-          </nav>
-          <a className="nav-cta" href="https://wa.me/6285724159878?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noreferrer">Konsultasi ↗</a>
-        </div>
-      </header>
+   <header className="site-header">
+  <div className="container nav-wrap">
+
+    <a href="/" className="brand">
+      <img
+        src="/logo-batara.jpg"
+        alt="Batara Project"
+        className="brand-logo"
+      />
+
+      <div className="brand-info">
+        <strong>BATARA PROJECT</strong>
+        <small>Partner Digital untuk Pengembangan Usaha</small>
+      </div>
+    </a>
+
+    <nav className="nav-links">
+      <a href="/" className="active">Beranda</a>
+      <a href="/#layanan">Layanan</a>
+      <a href="/#tentang">Tentang Kami</a>
+      <a href="/#portofolio">Portofolio</a>
+    </nav>
+
+    <a
+      href="https://wa.me/6285724159878"
+      className="nav-cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Konsultasi ↗
+    </a>
+
+    <button className="mobile-menu" aria-label="Buka menu">
+      ☰
+    </button>
+
+  </div>
+</header>
 
       <section id="top" className="hero">
         <div className="container hero-grid">

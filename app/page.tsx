@@ -1,89 +1,140 @@
+const services = [
+  {
+    number: '01',
+    slug: 'pulsa-ppob',
+    title: 'Distributor Pulsa & PPOB',
+    text: 'Menjadi mitra atau distributor produk digital dan layanan PPOB dengan sistem yang cepat, praktis, dan transparan.',
+    items: ['Transaksi berbasis Aplikasi', 'Opsi Pengisian Saldo Tanpa Ribet ( Bisa di Jemput Petugas Kami )', 'Harga yang kompetitif, Sehingga keuntungan bisa lebih maksimal'],
+    tone: 'blue',
+  },
+  {
+    number: '02',
+    slug: 'digitalisasi-umkm',
+    title: 'Digitalisasi UMKM',
+    text: 'Membantu usaha mulai tercatat, terpantau, dan berkembang dengan solusi digital yang mudah digunakan.',
+    items: ['Pembuatan QRIS Sesuai Nama Usaha', 'Aplikasi POS / Kasir', 'Excel Pencatat Penjualan'],
+    tone: 'green',
+  },
+  {
+    number: '03',
+    slug: 'konsultasi-solusi-digital',
+    title: 'Konsultasi&Solusi-Digital',
+    text: 'Mewujudkan kebutuhan sistem dan aplikasi bisnis melalui proses analisis hingga pengembangan bersama partner teknologi.',
+    items: ['Aplikasi Bisnis', 'Sistem Custom', 'Web & Mobile App'],
+    tone: 'violet',
+  },
+];
+
+const portfolio = [
+  { title: 'QRIS UMKM', category: 'Digitalisasi UMKM', icon: '▦' },
+  { title: 'Sistem Kasir', category: 'POS / Kasir', icon: '▣' },
+  { title: 'Excel Penjualan', category: 'Pencatatan Usaha', icon: '▤' },
+];
+
+function Arrow() { return <span aria-hidden>→</span>; }
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#1e252b] text-white font-sans selection:bg-amber-500/30">
-      {/* Header */}
-      <header className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto border-b border-white/10">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center font-bold text-slate-950">
-            B
-          </div>
-          <h1 className="text-xl font-bold tracking-wider text-white">
-            BATARA <span className="text-amber-500">PROJECT</span>
-          </h1>
+    <main>
+      <header className="site-header">
+        <div className="container nav-wrap">
+          <a className="brand" href="#top" aria-label="Batara Project">
+  <div className="brand-mark">
+  <img
+    src="/logo-batara.jpg"
+    alt="Batara Project"
+    style={{
+      width: "42px",
+      height: "42px",
+      objectFit: "contain",
+      borderRadius: "50%",
+      display: "block",
+    }}
+  />
+</div>
+            <span><strong>BATARA PROJECT</strong><small>Partner Digital untuk Pengembangan Usaha</small></span>
+          </a>
+          <nav className="nav-links">
+            <a className="active" href="#top">Beranda</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#tentang">Tentang Kami</a>
+            <a href="#kontak">Kontak</a>
+          </nav>
+          <a className="nav-cta" href="https://wa.me/6285724159878?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noreferrer">Konsultasi ↗</a>
         </div>
-        
-        <nav className="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-          <a href="#beranda" className="hover:text-amber-500 transition">BERANDA</a>
-          <a href="#layanan" className="hover:text-amber-500 transition">LAYANAN</a>
-          <a href="#tentang" className="hover:text-amber-500 transition">TENTANG KAMI</a>
-          <a href="#kontak" className="hover:text-amber-500 transition">KONTAK</a>
-        </nav>
-
-        <button className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-6 py-2 rounded-full font-bold text-sm transition shadow-lg shadow-amber-500/20">
-          KONSULTASI SEKARANG
-        </button>
       </header>
 
-      {/* Hero Section */}
-      <section id="beranda" className="max-w-7xl mx-auto px-8 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
-        <div className="md:w-1/2 space-y-6">
-          <span className="text-amber-400 text-xs tracking-widest uppercase font-semibold border border-amber-500/30 px-4 py-1.5 rounded-full bg-amber-500/10">
-            Mitra Transaksi Digital &amp; Media
-          </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-white">
-            AKSELERASI BISNIS DENGAN SOLUSI DIGITAL TERINTEGRASI.
-          </h2>
-          <p className="text-slate-400 text-base md:text-lg leading-relaxed">
-            Mendukung pertumbuhan usaha Anda melalui ekosistem transaksi digital praktis, periklanan kreatif, serta jaringan distribusi produk yang solid.
-          </p>
-          
-          <div className="flex flex-wrap gap-4 pt-2">
-            <button className="border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-slate-950 px-8 py-3 rounded-full font-bold transition">
-              JELAJAHI LAYANAN
-            </button>
-            <button className="border-2 border-slate-600 text-slate-300 hover:border-slate-400 px-8 py-3 rounded-full font-bold transition">
-              HUBUNGI WHATSAPP
-            </button>
-          </div>
-        </div>
-
-        {/* Visual Box */}
-        <div className="md:w-1/2 w-full">
-          <div className="w-full h-80 bg-gradient-to-tr from-slate-900 to-slate-800 rounded-2xl border border-white/10 shadow-2xl flex flex-col items-center justify-center p-6 text-center">
-            <div className="w-16 h-16 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-center justify-center text-amber-500 text-2xl font-bold mb-4">
-              QRIS
+      <section id="top" className="hero">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <span className="eyebrow">Partner Digital untuk Pengembangan Usaha</span>
+            <h1>Solusi Digital untuk <span>Usaha yang Lebih Maju.</span></h1>
+            <p>Batara Project membantu usaha mengelola dan mengembangkan bisnis melalui layanan digital yang praktis, terpercaya, dan sesuai kebutuhan.</p>
+            <div className="hero-actions">
+              <a className="btn primary" href="#layanan">Lihat Layanan <Arrow /></a>
+              <a className="btn secondary" href="https://wa.me/6285724159878?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noreferrer">Konsultasi via WhatsApp</a>
             </div>
-            <p className="text-white font-semibold text-lg">Batara Payment &amp; Media</p>
-            <p className="text-slate-400 text-sm mt-1">Sistem transaksi serbaguna untuk skala usaha UMKM hingga korporasi.</p>
+            <div className="trust-row">
+              <div><b>✓</b><span><strong>Solusi Tepat</strong><small>Sesuai kebutuhan usaha</small></span></div>
+              <div><b>✓</b><span><strong>Proses Mudah</strong><small>Pendampingan penuh</small></span></div>
+              <div><b>✓</b><span><strong>Terpercaya</strong><small>Partner bisnis Anda</small></span></div>
+            </div>
+          </div>
+          <div className="hero-visual" aria-label="Ilustrasi layanan digital">
+            <div className="glow" />
+            <div className="device laptop"><div className="screen"><div className="screen-title">Dashboard Usaha</div><div className="chart"><i/><i/><i/><i/><i/><i/></div><div className="mini-lines"><i/><i/><i/></div></div></div>
+            <div className="device phone"><div className="phone-screen"><div className="phone-top"/><div className="phone-card">PPOB<br/><b>Rp 1.250.000</b></div><div className="phone-card">Transaksi<br/><b>124</b></div></div></div>
+            <div className="qris-card"><div className="qris-label">QRIS</div><div className="qr">▦</div><small>BATARA PROJECT</small></div>
+            <div className="receipt" />
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="layanan" className="max-w-7xl mx-auto px-8 py-12 border-t border-white/10">
-        <h3 className="text-amber-500 text-sm font-bold tracking-widest uppercase mb-2">Layanan Utama</h3>
-        <h4 className="text-2xl md:text-3xl font-bold text-white mb-8">Solusi yang Kami Sediakan</h4>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-slate-900/60 p-8 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition">
-            <div className="text-amber-500 text-3xl mb-4">💳</div>
-            <h5 className="text-xl font-bold text-white mb-2">Batara Payment</h5>
-            <p className="text-slate-400 text-sm leading-relaxed">Layanan transaksi digital, top-up, dan integrasi QRIS Dana Bisnis untuk memudahkan pembayaran usaha Anda secara praktis dan aman.</p>
-          </div>
-
-          <div className="bg-slate-900/60 p-8 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition">
-            <div className="text-amber-500 text-3xl mb-4">🎬</div>
-            <h5 className="text-xl font-bold text-white mb-2">Periklanan &amp; Media</h5>
-            <p className="text-slate-400 text-sm leading-relaxed">Pembuatan banner, logo branding, serta promosi pemasaran berbasis teknologi kreatif modern.</p>
-          </div>
-
-          <div className="bg-slate-900/60 p-8 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition">
-            <div className="text-amber-500 text-3xl mb-4">🚀</div>
-            <h5 className="text-xl font-bold text-white mb-2">Pengembangan Ekosistem</h5>
-            <p className="text-slate-400 text-sm leading-relaxed">Pendampingan distribusi produk dan infrastruktur digital untuk memperluas jangkauan operasional bisnis.</p>
+      <section id="layanan" className="section services-section">
+        <div className="container">
+          <div className="section-head center"><span className="eyebrow">LAYANAN KAMI</span><h2>Tiga Fokus Layanan Kami</h2><p>Kami fokus pada kebutuhan digital yang benar-benar dibutuhkan usaha untuk bertumbuh.</p></div>
+          <div className="service-grid">
+            {services.map((service) => (
+              <article className={`service-card ${service.tone}`} key={service.number}>
+                <div className="service-top"><span className="service-number">{service.number}</span><span className="service-icon">✦</span></div>
+                <h3>{service.title}</h3><p>{service.text}</p>
+                <ul>{service.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                <a href={`/layanan/${service.slug}`}>Pelajari Selengkapnya <Arrow /></a>
+              </article>
+            ))}
           </div>
         </div>
       </section>
+
+      <section className="stats">
+        <div className="container stats-grid">
+          <div><strong>100+</strong><span>Mitra & Pelanggan</span></div>
+          <div><strong>200+</strong><span>Project & Solusi</span></div>
+          <div><strong>3+</strong><span>Tahun Pengalaman</span></div>
+          <div><strong>100%</strong><span>Komitmen & Support</span></div>
+        </div>
+      </section>
+
+      <section id="tentang" className="section about-section">
+        <div className="container about-grid">
+          <div><span className="eyebrow">KENAPA BATARA PROJECT?</span><h2>Kami Membantu, Bukan Hanya Menjual Produk.</h2><p className="lead">Kami memahami kebutuhan usaha terlebih dahulu, lalu membantu memilih solusi yang paling masuk akal.</p><a className="btn secondary" href="#kontak">Tentang Kami <Arrow /></a></div>
+          <div className="benefits">
+            {['Fokus Pada Kebutuhan', 'Dapat Dikembangkan', 'Praktis & Mudah Digunakan', 'Terhubung dengan Partner', 'Pendampingan Penuh'].map((x) => <div className="benefit" key={x}><span>✓</span><div><strong>{x}</strong><p>Solusi dirancang agar mudah dipahami dan digunakan oleh usaha.</p></div></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="section portfolio-section">
+        <div className="container"><div className="section-head"><span className="eyebrow">PORTFOLIO KAMI</span><h2>Beberapa Hasil Pekerjaan Kami</h2></div>
+          <div className="portfolio-grid">{portfolio.map((item) => <article className="portfolio-card" key={item.title}><div className="portfolio-art"><span>{item.icon}</span></div><small>{item.category}</small><h3>{item.title}</h3><a href="#detail">Lihat Detail <Arrow /></a></article>)}</div>
+          <a className="all-link" href="#detail">Lihat Semua Portfolio <Arrow /></a>
+        </div>
+      </section>
+
+      <section id="kontak" className="cta-section"><div className="container cta"><div><span className="cta-bubble">✦</span><div><h2>Punya kebutuhan untuk usaha Anda?</h2><p>Ceritakan kebutuhan Anda. Kami siap membantu menemukan solusi yang sesuai.</p></div></div><a className="btn whatsapp" href="https://wa.me/6280000000000?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noreferrer">Konsultasi via WhatsApp</a></div></section>
+
+      <footer className="footer"><div className="container footer-grid"><div><a className="brand footer-brand" href="#top"><span className="brand-mark">B</span><span><strong>BATARA PROJECT</strong><small>Partner Digital untuk Pengembangan Usaha</small></span></a><p>Solusi digital untuk membantu usaha berkembang lebih mudah dan terarah.</p></div><div><h4>Layanan</h4><a href="#layanan">Pulsa & PPOB</a><a href="#layanan">Digitalisasi UMKM</a><a href="#layanan">Layanan Aplikasi</a></div><div><h4>Informasi</h4><a href="#tentang">Tentang Kami</a><a href="#portfolio">Portfolio</a><a href="#kontak">Kontak</a></div><div><h4>Hubungi</h4><a href="#kontak">WhatsApp</a><a href="#kontak">Email</a></div></div><div className="container footer-bottom">© 2026 Batara Project. Semua hak dilindungi.</div></footer>
     </main>
   );
 }

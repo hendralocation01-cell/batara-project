@@ -245,7 +245,7 @@ export default function KonsultasiSolusiDigitalPage() {
 
             <a
               className="nav-cta"
-              href="https://wa.me/6280000000000?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi%20tentang%20kebutuhan%20digital."
+              href="https://wa.me/6285724159878?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi%20tentang%20kebutuhan%20digital."
               target="_blank"
               rel="noreferrer"
             >

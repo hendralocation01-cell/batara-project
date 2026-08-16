@@ -68,46 +68,46 @@ export default function PulsaPpobPage() {
           <div className="service-grid">
             <article className="service-card blue">
               <span className="service-number">01</span>
-              <h3>Pulsa & Paket Data</h3>
+              <h3>Peluang Usaha Agen Pulsa</h3>
               <p>
-                Melayani kebutuhan pulsa dan paket data berbagai operator
-                seluler untuk pelanggan Anda.
+                Mengajak pelaku usaha Konter, Warung Sembako, Perorangan Bahkan Instansi dan organisasi,
+                Untuk menjadi Agen pengisian Saldo Aplikasi Jualan Pulsa & PPOB di wilayah nya dengan atau tanpa modal.
               </p>
             </article>
 
             <article className="service-card green">
               <span className="service-number">02</span>
-              <h3>Token Listrik</h3>
+              <h3>Aplikasi Jualan Pulsa Murah</h3>
               <p>
-                Menyediakan transaksi token listrik prabayar dengan proses
-                yang praktis.
+                Menyediakan aplikasi untuk anda yang berminat jualan pulsa, ataupun sudah berjualan pulsa.
+                Kami menyediakan aplikasi, dengan harga yang komeptitif dan keunggulan lain nya.
               </p>
             </article>
 
             <article className="service-card violet">
               <span className="service-number">03</span>
-              <h3>Top Up E-Wallet</h3>
+              <h3>Aplikasi Whitelabel</h3>
               <p>
-                Melayani berbagai kebutuhan pengisian saldo dompet digital
-                pelanggan.
+                Khusus kamu yang sudah memiliki downline sebelum nya, kami menyediakan Aplikasi whitelabel.
+                Aplikasi whitelabel adalah aplikasi yang car mark up nya bisa di sesuaikan dengan keinginan kita, bukan flat seperti Aplikasi Lain nya.
               </p>
             </article>
 
             <article className="service-card blue">
               <span className="service-number">04</span>
-              <h3>PPOB</h3>
+              <h3>JUalan Pulsa Tanpa Modal</h3>
               <p>
-                Membantu menyediakan layanan pembayaran tagihan dan kebutuhan
-                PPOB lainnya melalui satu sistem.
+                Khusus wilayah Kabupaten kunigan, kami Ada program JPTM ( Jualan Pulsa Tanpa Modal ).
+                Dimana jika kamu ingin berjualan pulsa, kami sudah sediakan saldo nya.
               </p>
             </article>
 
             <article className="service-card green">
               <span className="service-number">05</span>
-              <h3>Voucher Digital</h3>
+              <h3>Top Up Saldo Tanpa Ribet</h3>
               <p>
-                Produk voucher digital dapat menjadi tambahan pilihan transaksi
-                bagi pelanggan usaha Anda.
+                Jika memakai produk kami, dan kamu tidak berminat di JPTM. Maka Di reguler, Kami melayani sistem top up COD.
+                kamu request dulu saldo nya, lalu kami isi dan untuk pembayaran bisa di jemput Petugas Kami.
               </p>
             </article>
 
@@ -281,7 +281,7 @@ export default function PulsaPpobPage() {
 
             <a
               className="nav-cta"
-              href="https://wa.me/6280000000000?text=Halo%20Batara%20Project%2C%20saya%20ingin%20menjadi%20mitra%20Distributor%20Pulsa%20dan%20PPOB."
+              href="https://wa.me/6285724159878?text=Halo%20Batara%20Project%2C%20saya%20ingin%20menjadi%20mitra%20Distributor%20Pulsa%20dan%20PPOB."
               target="_blank"
               rel="noreferrer"
             >

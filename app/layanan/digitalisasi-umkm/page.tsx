@@ -98,7 +98,7 @@ export default function DigitalisasiUmkmPage() {
 
             <a
               className="nav-cta"
-              href="https://wa.me/6280000000000?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi%20tentang%20Digitalisasi%20UMKM."
+              href="https://wa.me/6285724159878?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi%20tentang%20Digitalisasi%20UMKM."
               target="_blank"
               rel="noreferrer"
             >

@@ -1144,3 +1144,313 @@ button{
     font-size:14px;
   }
 }
+/* =====================================================
+   PULSA & PPOB DETAIL
+   ===================================================== */
+
+.platform-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+  margin-top:35px;
+}
+
+.platform-card{
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(212,175,55,.08),
+      transparent 38%
+    ),
+    #111;
+  border:1px solid #2c2c2c;
+  border-radius:22px;
+  padding:28px;
+  transition:.25s;
+}
+
+.platform-card:hover{
+  border-color:rgba(212,175,55,.65);
+  transform:translateY(-3px);
+  box-shadow:0 20px 45px rgba(0,0,0,.35);
+}
+
+.platform-logo-wrap{
+  width:92px;
+  height:92px;
+  border-radius:20px;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  margin-bottom:22px;
+}
+
+.platform-logo{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.platform-label{
+  color:#d4af37;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.platform-content h2{
+  font-size:28px;
+  color:#f5f5f5;
+  margin:8px 0 12px;
+}
+
+.platform-content p{
+  color:#999;
+  line-height:1.7;
+  font-size:13px;
+}
+
+.platform-content ul{
+  padding:0;
+  list-style:none;
+  margin:20px 0;
+}
+
+.platform-content li{
+  color:#bbb;
+  font-size:12px;
+  margin:10px 0;
+}
+
+.platform-content li:before{
+  content:"✓";
+  color:#d4af37;
+  font-weight:900;
+  margin-right:9px;
+}
+
+.platform-wa{
+  width:100%;
+  min-height:48px;
+  padding:12px 16px;
+  border-radius:11px;
+  border:1px solid #d4af37;
+  color:#d4af37;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:12px;
+  font-weight:900;
+  transition:.2s;
+}
+
+.platform-wa:hover{
+  background:#d4af37;
+  color:#080808;
+}
+
+.ppob-products{
+  background:#0d0d0d;
+}
+
+.product-mini-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:12px;
+  margin-top:35px;
+}
+
+.product-mini{
+  background:#131313;
+  border:1px solid #292929;
+  border-radius:16px;
+  padding:22px 12px;
+  text-align:center;
+}
+
+.product-mini strong{
+  display:block;
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.product-mini h3{
+  font-size:12px;
+  margin:0;
+  color:#eee;
+}
+
+.product-mini small{
+  color:#777;
+  display:block;
+  margin-top:5px;
+  font-size:9px;
+}
+
+.ppob-benefits{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:30px;
+}
+
+.ppob-benefits div{
+  background:#131313;
+  border:1px solid #292929;
+  padding:17px 18px;
+  border-radius:12px;
+  color:#bbb;
+  font-size:12px;
+}
+
+.ppob-benefits div::first-letter{
+  color:#d4af37;
+}
+
+.ppob-steps{
+  background:#0d0d0d;
+}
+
+.step-list{
+  max-width:760px;
+  margin:35px auto 0;
+  display:grid;
+  gap:12px;
+}
+
+.step-item{
+  background:#131313;
+  border:1px solid #292929;
+  border-radius:14px;
+  padding:17px;
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+.step-item b{
+  width:36px;
+  height:36px;
+  flex:none;
+  background:#d4af37;
+  color:#080808;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+}
+
+.step-item h3{
+  margin:0;
+  color:#eee;
+  font-size:14px;
+}
+
+.step-item p{
+  margin:4px 0 0;
+  color:#888;
+  font-size:11px;
+}
+
+.ppob-final-cta{
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(212,175,55,.12),
+      transparent 40%
+    ),
+    #111;
+  border:1px solid rgba(212,175,55,.35);
+  border-radius:22px;
+  padding:45px;
+  text-align:center;
+}
+
+.ppob-final-cta h2{
+  color:#fff;
+  font-size:30px;
+  margin:15px 0 10px;
+}
+
+.ppob-final-cta p{
+  color:#999;
+  max-width:620px;
+  margin:0 auto 25px;
+  line-height:1.7;
+}
+
+.platform-wa.final{
+  max-width:400px;
+  margin:auto;
+  background:linear-gradient(135deg,#f0d77a,#d4af37);
+  color:#080808;
+  border:0;
+}
+
+
+/* TABLET */
+
+@media(max-width:900px){
+
+  .platform-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-mini-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+
+/* MOBILE */
+
+@media(max-width:560px){
+
+  .platform-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .platform-card{
+    padding:22px;
+  }
+
+  .platform-logo-wrap{
+    width:82px;
+    height:82px;
+  }
+
+  .platform-content h2{
+    font-size:24px;
+  }
+
+  .platform-content p{
+    font-size:12px;
+  }
+
+  .platform-wa{
+    min-height:52px;
+    font-size:12px;
+  }
+
+  .product-mini-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .product-mini{
+    padding:20px 10px;
+  }
+
+  .ppob-benefits{
+    grid-template-columns:1fr;
+  }
+
+  .ppob-final-cta{
+    padding:30px 20px;
+  }
+
+  .ppob-final-cta h2{
+    font-size:25px;
+  }
+}

@@ -1,295 +1,300 @@
 export default function PulsaPpobPage() {
+  const nomorWA = "628XXXXXXXXXX";
+
+  const waYellowPay =
+    `https://wa.me/${nomorWA}?text=` +
+    encodeURIComponent(
+      "Halo Batara Project, saya tertarik menjadi mitra YellowPay. Saya ingin mendapatkan informasi lebih lanjut."
+    );
+
+  const waDermaga =
+    `https://wa.me/${nomorWA}?text=` +
+    encodeURIComponent(
+      "Halo Batara Project, saya tertarik menjadi mitra Dermaga Reload. Saya ingin mendapatkan informasi lebih lanjut."
+    );
+
+  const waUmum =
+    `https://wa.me/${nomorWA}?text=` +
+    encodeURIComponent(
+      "Halo Batara Project, saya ingin konsultasi mengenai layanan Distributor Pulsa & PPOB."
+    );
+
   return (
-    <main>
-      {/* Hero */}
+    <main className="ppob-page">
+
+      {/* HERO */}
       <section className="service-detail-hero">
         <div className="container">
           <span className="eyebrow">DISTRIBUTOR PULSA & PPOB</span>
 
           <h1>
-            Bangun Bisnis Produk Digital
-            <span> Bersama Batara Project.</span>
+            Tambah Layanan Digital
+            <span> di Usaha Anda.</span>
           </h1>
 
           <p>
-            Jadikan toko, konter, warung, atau usaha Anda sebagai tempat
-            transaksi berbagai produk digital dan layanan PPOB dengan sistem
-            yang praktis dan mudah digunakan.
+            Batara Project membantu menyediakan akses layanan pulsa, paket data,
+            token listrik, PPOB, e-wallet dan berbagai produk digital melalui
+            platform mitra yang praktis digunakan.
           </p>
-
-          <a
-            className="nav-cta"
-            href="#detail"
-          >
-            Pelajari Layanannya ↓
-          </a>
         </div>
       </section>
 
-      {/* Tentang layanan */}
-      <section id="detail" className="section">
+      {/* PLATFORM */}
+      <section className="section">
         <div className="container">
-          <div className="section-head">
-            <span className="eyebrow">TENTANG LAYANAN</span>
 
-            <h2>
-              Satu Sistem untuk
-              <span> Berbagai Kebutuhan Transaksi.</span>
-            </h2>
-
+          <div className="section-head center">
+            <span className="eyebrow">PLATFORM MITRA</span>
+            <h2>Pilih Platform yang Sesuai</h2>
             <p>
-              Batara Project menyediakan layanan distributor produk digital
-              yang dapat dimanfaatkan untuk kebutuhan usaha sendiri maupun
-              dijual kembali kepada pelanggan.
+              Tersedia pilihan platform transaksi digital yang dapat digunakan
+              untuk kebutuhan agen, toko, konter maupun usaha lainnya.
             </p>
+          </div>
 
-            <p>
-              Dengan sistem berbasis aplikasi, transaksi dapat dilakukan
-              dengan lebih praktis tanpa harus menggunakan banyak platform
-              berbeda.
-            </p>
+          <div className="platform-grid">
+
+            {/* YELLOWPAY */}
+            <article className="platform-card">
+
+              <div className="platform-logo-wrap">
+                <img
+                  src="/yellowpay.jpeg"
+                  alt="YellowPay"
+                  className="platform-logo"
+                />
+              </div>
+
+              <div className="platform-content">
+                <span className="platform-label">PLATFORM TRANSAKSI</span>
+
+                <h2>YellowPay</h2>
+
+                <p>
+                  Platform transaksi digital untuk kebutuhan pulsa, paket data,
+                  PPOB, token listrik, e-wallet dan berbagai produk digital
+                  lainnya.
+                </p>
+
+                <ul>
+                  <li>Transaksi berbasis aplikasi</li>
+                  <li>Produk digital lengkap</li>
+                  <li>Cocok untuk agen dan usaha</li>
+                  <li>Praktis digunakan</li>
+                </ul>
+
+                <a
+                  className="platform-wa"
+                  href={waYellowPay}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Konsultasi YellowPay →
+                </a>
+              </div>
+
+            </article>
+
+            {/* DERMAGA RELOAD */}
+            <article className="platform-card">
+
+              <div className="platform-logo-wrap">
+                <img
+                  src="/dermaga-reload.jpeg"
+                  alt="Dermaga Reload"
+                  className="platform-logo"
+                />
+              </div>
+
+              <div className="platform-content">
+                <span className="platform-label">PLATFORM TRANSAKSI</span>
+
+                <h2>Dermaga Reload</h2>
+
+                <p>
+                  Platform transaksi digital dengan pilihan produk yang lengkap
+                  untuk kebutuhan agen, konter, toko maupun berbagai jenis usaha.
+                </p>
+
+                <ul>
+                  <li>Pulsa & paket data</li>
+                  <li>Token & pembayaran PPOB</li>
+                  <li>Produk digital lainnya</li>
+                  <li>Cocok untuk usaha retail</li>
+                </ul>
+
+                <a
+                  className="platform-wa"
+                  href={waDermaga}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Konsultasi Dermaga Reload →
+                </a>
+              </div>
+
+            </article>
+
           </div>
         </div>
       </section>
 
-      {/* Produk */}
-      <section className="section">
+      {/* PRODUK */}
+      <section className="section ppob-products">
         <div className="container">
+
           <div className="section-head center">
             <span className="eyebrow">PRODUK & LAYANAN</span>
-
-            <h2>Apa Saja yang Bisa Ditawarkan?</h2>
-
-            <p>
-              Berbagai kebutuhan produk digital tersedia dalam satu layanan.
-            </p>
+            <h2>Satu Aplikasi, Banyak Transaksi</h2>
           </div>
 
-          <div className="service-grid">
-            <article className="service-card blue">
-              <span className="service-number">01</span>
-              <h3>Peluang Usaha Agen Pulsa</h3>
-              <p>
-                Mengajak pelaku usaha Konter, Warung Sembako, Perorangan Bahkan Instansi dan organisasi,
-                Untuk menjadi Agen pengisian Saldo Aplikasi Jualan Pulsa & PPOB di wilayah nya dengan atau tanpa modal.
-              </p>
-            </article>
+          <div className="product-mini-grid">
 
-            <article className="service-card green">
-              <span className="service-number">02</span>
-              <h3>Aplikasi Jualan Pulsa Murah</h3>
-              <p>
-                Menyediakan aplikasi untuk anda yang berminat jualan pulsa, ataupun sudah berjualan pulsa.
-                Kami menyediakan aplikasi, dengan harga yang komeptitif dan keunggulan lain nya.
-              </p>
-            </article>
+            <div className="product-mini">
+              <strong>📱</strong>
+              <h3>Pulsa</h3>
+              <small>Semua Operator</small>
+            </div>
 
-            <article className="service-card violet">
-              <span className="service-number">03</span>
-              <h3>Aplikasi Whitelabel</h3>
-              <p>
-                Khusus kamu yang sudah memiliki downline sebelum nya, kami menyediakan Aplikasi whitelabel.
-                Aplikasi whitelabel adalah aplikasi yang car mark up nya bisa di sesuaikan dengan keinginan kita, bukan flat seperti Aplikasi Lain nya.
-              </p>
-            </article>
+            <div className="product-mini">
+              <strong>📶</strong>
+              <h3>Paket Data</h3>
+              <small>Internet</small>
+            </div>
 
-            <article className="service-card blue">
-              <span className="service-number">04</span>
-              <h3>JUalan Pulsa Tanpa Modal</h3>
-              <p>
-                Khusus wilayah Kabupaten kunigan, kami Ada program JPTM ( Jualan Pulsa Tanpa Modal ).
-                Dimana jika kamu ingin berjualan pulsa, kami sudah sediakan saldo nya.
-              </p>
-            </article>
+            <div className="product-mini">
+              <strong>⚡</strong>
+              <h3>Token PLN</h3>
+              <small>Listrik</small>
+            </div>
 
-            <article className="service-card green">
-              <span className="service-number">05</span>
-              <h3>Top Up Saldo Tanpa Ribet</h3>
-              <p>
-                Jika memakai produk kami, dan kamu tidak berminat di JPTM. Maka Di reguler, Kami melayani sistem top up COD.
-                kamu request dulu saldo nya, lalu kami isi dan untuk pembayaran bisa di jemput Petugas Kami.
-              </p>
-            </article>
+            <div className="product-mini">
+              <strong>🧾</strong>
+              <h3>PPOB</h3>
+              <small>Tagihan</small>
+            </div>
 
-            <article className="service-card violet">
-              <span className="service-number">06</span>
-              <h3>Produk Digital Lainnya</h3>
-              <p>
-                Ketersediaan produk dapat berkembang mengikuti kebutuhan pasar
-                dan layanan yang tersedia di sistem.
-              </p>
-            </article>
+            <div className="product-mini">
+              <strong>💳</strong>
+              <h3>E-Wallet</h3>
+              <small>Top Up</small>
+            </div>
+
+            <div className="product-mini">
+              <strong>🎟️</strong>
+              <h3>Voucher</h3>
+              <small>Digital</small>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* Keuntungan */}
+      {/* KEUNTUNGAN */}
       <section className="section">
         <div className="container">
+
           <div className="section-head center">
-            <span className="eyebrow">KEUNTUNGAN MENJADI MITRA</span>
-
-            <h2>Kenapa Bergabung dengan Batara Project?</h2>
+            <span className="eyebrow">KEUNTUNGAN</span>
+            <h2>Kenapa Menjadi Mitra?</h2>
           </div>
 
-          <div className="service-grid">
-            <article className="service-card">
-              <span className="service-number">01</span>
-              <h3>Transaksi Berbasis Aplikasi</h3>
-              <p>
-                Transaksi dilakukan melalui sistem aplikasi sehingga lebih
-                praktis dan mudah digunakan.
-              </p>
-            </article>
-
-            <article className="service-card">
-              <span className="service-number">02</span>
-              <h3>Harga Kompetitif</h3>
-              <p>
-                Harga transaksi yang kompetitif memberikan ruang bagi mitra
-                untuk mendapatkan keuntungan yang lebih maksimal.
-              </p>
-            </article>
-
-            <article className="service-card">
-              <span className="service-number">03</span>
-              <h3>Pengisian Saldo Lebih Mudah</h3>
-              <p>
-                Tersedia opsi pengisian saldo yang praktis, termasuk layanan
-                pengisian yang dapat dijemput petugas kami.
-              </p>
-            </article>
-
-            <article className="service-card">
-              <span className="service-number">04</span>
-              <h3>Cocok untuk Berbagai Usaha</h3>
-              <p>
-                Dapat digunakan oleh konter, toko sembako, warung, agen, dan
-                berbagai jenis usaha lainnya.
-              </p>
-            </article>
+          <div className="ppob-benefits">
+            <div>✓ Transaksi berbasis aplikasi</div>
+            <div>✓ Harga kompetitif</div>
+            <div>✓ Cocok untuk konter, toko dan warung</div>
+            <div>✓ Bisa menjadi layanan tambahan usaha</div>
+            <div>✓ Pengisian saldo praktis</div>
+            <div>✓ Pendampingan awal penggunaan</div>
           </div>
+
         </div>
       </section>
 
-      {/* Cocok untuk siapa */}
-      <section className="section">
+      {/* CARA BERGABUNG */}
+      <section className="section ppob-steps">
         <div className="container">
-          <div className="section-head">
-            <span className="eyebrow">UNTUK SIAPA?</span>
 
-            <h2>
-              Bisa Dimulai dari
-              <span> Usaha yang Sudah Anda Miliki.</span>
-            </h2>
-
-            <p>
-              Anda tidak harus memiliki konter pulsa khusus. Layanan ini dapat
-              menjadi tambahan produk untuk usaha yang sudah berjalan.
-            </p>
-          </div>
-
-          <div className="service-grid">
-            <article className="service-card">
-              <h3>Konter Pulsa</h3>
-              <p>
-                Tambahkan berbagai produk digital untuk memperluas pilihan
-                transaksi pelanggan.
-              </p>
-            </article>
-
-            <article className="service-card">
-              <h3>Toko & Warung</h3>
-              <p>
-                Jadikan toko sebagai tempat pelanggan melakukan transaksi
-                digital sekaligus berbelanja kebutuhan sehari-hari.
-              </p>
-            </article>
-
-            <article className="service-card">
-              <h3>Agen & Individu</h3>
-              <p>
-                Cocok bagi Anda yang ingin membangun usaha tambahan dari
-                transaksi produk digital.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* Cara bergabung */}
-      <section className="section">
-        <div className="container">
           <div className="section-head center">
             <span className="eyebrow">CARA BERGABUNG</span>
-
-            <h2>Mulai dalam Beberapa Langkah.</h2>
+            <h2>Mulai dalam Beberapa Langkah</h2>
           </div>
 
-          <div className="service-grid">
-            <article className="service-card">
-              <span className="service-number">01</span>
-              <h3>Konsultasi</h3>
-              <p>
-                Hubungi Batara Project dan sampaikan kebutuhan usaha Anda.
-              </p>
-            </article>
+          <div className="step-list">
 
-            <article className="service-card">
-              <span className="service-number">02</span>
-              <h3>Registrasi Mitra</h3>
-              <p>
-                Lengkapi proses pendaftaran untuk mendapatkan akses layanan.
-              </p>
-            </article>
+            <div className="step-item">
+              <b>1</b>
+              <div>
+                <h3>Konsultasi</h3>
+                <p>Sampaikan kebutuhan usaha Anda.</p>
+              </div>
+            </div>
 
-            <article className="service-card">
-              <span className="service-number">03</span>
-              <h3>Isi Saldo</h3>
-              <p>
-                Siapkan saldo transaksi sesuai kebutuhan usaha Anda.
-              </p>
-            </article>
+            <div className="step-item">
+              <b>2</b>
+              <div>
+                <h3>Registrasi</h3>
+                <p>Lengkapi data pendaftaran mitra.</p>
+              </div>
+            </div>
 
-            <article className="service-card">
-              <span className="service-number">04</span>
-              <h3>Mulai Bertransaksi</h3>
-              <p>
-                Setelah siap, Anda dapat mulai melayani kebutuhan transaksi
-                pelanggan.
-              </p>
-            </article>
+            <div className="step-item">
+              <b>3</b>
+              <div>
+                <h3>Pilih Platform</h3>
+                <p>Pilih YellowPay atau Dermaga Reload.</p>
+              </div>
+            </div>
+
+            <div className="step-item">
+              <b>4</b>
+              <div>
+                <h3>Isi Saldo</h3>
+                <p>Siapkan saldo awal untuk transaksi.</p>
+              </div>
+            </div>
+
+            <div className="step-item">
+              <b>5</b>
+              <div>
+                <h3>Mulai Transaksi</h3>
+                <p>Anda siap melayani pelanggan.</p>
+              </div>
+            </div>
+
           </div>
+
         </div>
       </section>
 
       {/* CTA */}
       <section className="section">
         <div className="container">
-          <div className="section-head center">
+
+          <div className="ppob-final-cta">
             <span className="eyebrow">SIAP MENJADI MITRA?</span>
 
-            <h2>
-              Mulai Kembangkan
-              <span> Layanan Usaha Anda.</span>
-            </h2>
+            <h2>Tambahkan Layanan Digital ke Usaha Anda</h2>
 
             <p>
-              Konsultasikan kebutuhan Anda dengan Batara Project sebelum
-              memulai.
+              Belum yakin memilih YellowPay atau Dermaga Reload?
+              Konsultasikan terlebih dahulu dengan Batara Project.
             </p>
 
             <a
-              className="nav-cta"
-              href="https://wa.me/6285724159878?text=Halo%20Batara%20Project%2C%20saya%20ingin%20menjadi%20mitra%20Distributor%20Pulsa%20dan%20PPOB."
+              href={waUmum}
               target="_blank"
               rel="noreferrer"
+              className="platform-wa final"
             >
-              Konsultasi & Daftar ↗
+              Konsultasi via WhatsApp →
             </a>
           </div>
+
         </div>
       </section>
+
     </main>
   );
 }

@@ -1,20 +1,20 @@
 export default function PulsaPpobPage() {
-  const nomorWA = "628XXXXXXXXXX";
+  const nomorWA = "6285724159878";
 
   const waYellowPay =
-    `https://wa.me/6285724159878?text=` +
+    `https://wa.me/${nomorWA}?text=` +
     encodeURIComponent(
       "Halo Batara Project, saya tertarik menjadi mitra YellowPay. Saya ingin mendapatkan informasi lebih lanjut."
     );
 
   const waDermaga =
-    `https://wa.me/6285724159878?text=` +
+    `https://wa.me/${nomorWA}?text=` +
     encodeURIComponent(
       "Halo Batara Project, saya tertarik menjadi mitra Dermaga Reload. Saya ingin mendapatkan informasi lebih lanjut."
     );
 
   const waUmum =
-    `https://wa.me/6285724159878?text=` +
+    `https://wa.me/${nomorWA}?text=` +
     encodeURIComponent(
       "Halo Batara Project, saya ingin konsultasi mengenai layanan Distributor Pulsa & PPOB."
     );

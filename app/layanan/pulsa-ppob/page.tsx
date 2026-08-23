@@ -2,19 +2,19 @@ export default function PulsaPpobPage() {
   const nomorWA = "628XXXXXXXXXX";
 
   const waYellowPay =
-    `https://wa.me/${nomorWA}?text=` +
+    `https://wa.me/6285724159878?text=` +
     encodeURIComponent(
       "Halo Batara Project, saya tertarik menjadi mitra YellowPay. Saya ingin mendapatkan informasi lebih lanjut."
     );
 
   const waDermaga =
-    `https://wa.me/${nomorWA}?text=` +
+    `https://wa.me/6285724159878?text=` +
     encodeURIComponent(
       "Halo Batara Project, saya tertarik menjadi mitra Dermaga Reload. Saya ingin mendapatkan informasi lebih lanjut."
     );
 
   const waUmum =
-    `https://wa.me/${nomorWA}?text=` +
+    `https://wa.me/6285724159878?text=` +
     encodeURIComponent(
       "Halo Batara Project, saya ingin konsultasi mengenai layanan Distributor Pulsa & PPOB."
     );
@@ -113,13 +113,15 @@ export default function PulsaPpobPage() {
                 <h2>Dermaga Reload</h2>
 
                 <p>
-                  Platform transaksi digital dengan pilihan produk yang lengkap
-                  untuk kebutuhan agen, konter, toko maupun berbagai jenis usaha.
+                  Aplikasi Khusus di Buat untuk anda yang ingin menjadi master dealer, atau agen dan sudah memiliki downline.
+                  Selain bisa untuk transaksi, aplikasi ini bisa untuk menambah penghasilan Anda dengan cara menjadi agen,
+                  Kenapa harus Dermaga Reload?
+                  karena kita menyediakan fitur khusus, yaitu mark up yang bisa perproduk tidak Global Seperti Server lain.
                 </p>
 
                 <ul>
-                  <li>Pulsa & paket data</li>
-                  <li>Token & pembayaran PPOB</li>
+                  <li>Fitur khusus Mark Up Produk</li>
+                  <li>Pulsa, Paket Data, Token & pembayaran PPOB</li>
                   <li>Produk digital lainnya</li>
                   <li>Cocok untuk usaha retail</li>
                 </ul>

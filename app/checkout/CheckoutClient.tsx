@@ -12,6 +12,7 @@ type CartItem = {
 
 const CART_KEY = "batara_project_cart";
 const ORDER_DRAFT_KEY = "batara_project_checkout_draft";
+const WHATSAPP_NUMBER = "6285724159878";
 
 export default function CheckoutClient() {
   const [items, setItems] = useState<CartItem[]>([]);
@@ -112,11 +113,8 @@ Saya memahami bahwa harga final dikonfirmasi setelah Batara Project memeriksa ke
 
     setSubmittedText(text);
 
-    const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
-    if (number) {
-      const url = `https://wa.me/${number.replace(/\D/g, "")}?text=${encodeURIComponent(text)}`;
-      window.open(url, "_blank", "noopener,noreferrer");
-    }
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.location.href = url;
   }
 
   async function copySummary() {
@@ -266,13 +264,6 @@ Saya memahami bahwa harga final dikonfirmasi setelah Batara Project memeriksa ke
                 <button className={styles.submit} type="submit">
                   Kirim Permintaan Pesanan →
                 </button>
-
-                {!process.env.NEXT_PUBLIC_WHATSAPP_NUMBER && (
-                  <p className={styles.envNote}>
-                    Nomor WhatsApp Batara Project belum diset. Setelah submit,
-                    ringkasan tetap akan dibuat dan bisa disalin.
-                  </p>
-                )}
               </form>
             )}
 
@@ -340,8 +331,7 @@ Saya memahami bahwa harga final dikonfirmasi setelah Batara Project memeriksa ke
               <span>ESTIMASI HARGA</span>
               <strong>Dikonfirmasi setelah review</strong>
               <p>
-                Kami tidak menampilkan harga palsu atau paket yang tidak relevan.
-                Ruang lingkup diperiksa terlebih dahulu.
+                Ruang lingkup dan harga dikonfirmasi setelah kebutuhan diperiksa.
               </p>
             </div>
           </aside>

@@ -1,3 +1,6 @@
+const WHATSAPP_CONSULT_URL =
+  "https://wa.me/6285724159878?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi%20tentang%20kebutuhan%20usaha%20saya.";
+
 const services = [
   {
     no: "01",
@@ -33,7 +36,8 @@ const services = [
     no: "06",
     title: "Konsultasi & Solusi Digital",
     text: "Ceritakan kebutuhan Anda. Kami bantu menentukan solusi yang realistis dan sesuai.",
-    href: "/layanan/konsultasi-solusi-digital",
+    href: WHATSAPP_CONSULT_URL,
+    external: true,
   },
 ];
 
@@ -106,7 +110,14 @@ export default function Home() {
             <a href="#tentang">Tentang</a>
           </nav>
 
-          <a href="#kontak" className="header-cta">Konsultasi</a>
+          <a
+            href={WHATSAPP_CONSULT_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="header-cta"
+          >
+            Konsultasi
+          </a>
         </div>
       </header>
 
@@ -181,7 +192,13 @@ export default function Home() {
                   <strong>Belum tahu mulai dari mana?</strong>
                   <span>Ceritakan kebutuhan usaha Anda.</span>
                 </div>
-                <a href="/layanan/konsultasi-solusi-digital">Mulai →</a>
+                <a
+                  href={WHATSAPP_CONSULT_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Chat →
+                </a>
               </div>
             </div>
           </div>
@@ -223,7 +240,14 @@ export default function Home() {
                   <div className="service-no">{service.no}</div>
                   <h3>{service.title}</h3>
                   <p>{service.text}</p>
-                  <a href={service.href}>Lihat Rincian Jasa →</a>
+                  <a
+                    href={service.href}
+                    {...(service.external
+                      ? { target: "_blank", rel: "noreferrer" }
+                      : {})}
+                  >
+                    {service.external ? "Konsultasi via WhatsApp →" : "Lihat Rincian Jasa →"}
+                  </a>
                 </article>
               ))}
             </div>
@@ -239,7 +263,11 @@ export default function Home() {
                 Kami bantu menentukan titik awal yang paling masuk akal untuk
                 kondisi usaha Anda saat ini.
               </p>
-              <a href="/layanan/konsultasi-solusi-digital">
+              <a
+                href={WHATSAPP_CONSULT_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Konsultasikan Kebutuhan →
               </a>
             </div>
@@ -307,7 +335,11 @@ export default function Home() {
 
                   <div className="package-bottom">
                     <small>Harga menyesuaikan kebutuhan</small>
-                    <a href="/layanan/konsultasi-solusi-digital">
+                    <a
+                      href={WHATSAPP_CONSULT_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Konsultasikan Paket →
                     </a>
                   </div>
@@ -418,20 +450,22 @@ export default function Home() {
               <span>KONSULTASI AWAL</span>
               <h2>Belum yakin layanan mana yang dibutuhkan?</h2>
               <p>
-                Mulai dari halaman konsultasi. Jelaskan masalah atau tujuan usaha
-                Anda, lalu pilih kebutuhan yang paling relevan.
+                Ceritakan langsung kebutuhan atau kendala usaha Anda melalui
+                WhatsApp. Kami bantu menentukan solusi yang paling sesuai.
               </p>
             </div>
 
             <div className="cta-box">
               <a
-                href="/layanan/konsultasi-solusi-digital"
+                href={WHATSAPP_CONSULT_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="btn btn-light"
               >
-                Mulai Konsultasi
+                Chat WhatsApp
               </a>
               <small>
-                Tidak harus langsung memesan semua layanan.
+                Konsultasi awal langsung melalui WhatsApp.
               </small>
             </div>
           </div>

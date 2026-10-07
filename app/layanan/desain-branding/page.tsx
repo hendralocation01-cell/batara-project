@@ -2,5 +2,5 @@ import ServiceLanding from "../../components/ServiceLanding";
 import { getService } from "../../lib/services";
 
 export default function Page() {
-  return <ServiceLanding service={getService("konsultasi-solusi-digital")} />;
+  return <ServiceLanding service={getService("desain-branding")} />;
 }

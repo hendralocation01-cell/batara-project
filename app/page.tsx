@@ -1,150 +1,477 @@
 const services = [
   {
-    number: '01',
-    slug: 'pulsa-ppob',
-    title: 'Distributor Pulsa & PPOB',
-    text: 'Menjadi mitra atau distributor produk digital dan layanan PPOB dengan sistem yang cepat, praktis, dan transparan.',
-    items: ['Transaksi berbasis Aplikasi', 'Opsi Pengisian Saldo Tanpa Ribet ( Bisa di Jemput Petugas Kami )', 'Harga yang kompetitif, Sehingga keuntungan bisa lebih maksimal'],
-    tone: 'blue',
+    no: "01",
+    title: "Digitalisasi UMKM",
+    text: "QRIS, Google Business Profile, WhatsApp Business, katalog digital, dan formulir online.",
+    href: "/layanan/digitalisasi-umkm",
   },
   {
-    number: '02',
-    slug: 'digitalisasi-umkm',
-    title: 'Digitalisasi UMKM',
-    text: 'Membantu usaha mulai tercatat, terpantau, dan berkembang dengan solusi digital yang mudah digunakan.',
-    items: ['Pembuatan QRIS Sesuai Nama Usaha', 'Aplikasi POS / Kasir', 'Excel Pencatat Penjualan'],
-    tone: 'green',
+    no: "02",
+    title: "Desain & Branding",
+    text: "Logo, flyer, banner, menu, daftar harga, dan materi promosi usaha.",
+    href: "/layanan/desain-branding",
   },
   {
-    number: '03',
-    slug: 'konsultasi-solusi-digital',
-    title: 'Konsultasi&Solusi-Digital',
-    text: 'Mewujudkan kebutuhan sistem dan aplikasi bisnis melalui proses analisis hingga pengembangan bersama partner teknologi.',
-    items: ['Aplikasi Bisnis', 'Sistem Custom', 'Web & Mobile App'],
-    tone: 'violet',
+    no: "03",
+    title: "Website & Landing Page",
+    text: "Website profil, landing page, katalog produk, formulir, dan halaman event.",
+    href: "/layanan/website-landing-page",
+  },
+  {
+    no: "04",
+    title: "Administrasi Usaha",
+    text: "Template Excel, stok, rekap penjualan, invoice, nota, dan dokumen kerja.",
+    href: "/layanan/administrasi-usaha",
+  },
+  {
+    no: "05",
+    title: "Promosi & Konten Digital",
+    text: "Konten WhatsApp dan media sosial, copywriting, flyer, dan video promosi sederhana.",
+    href: "/layanan/promosi-konten-digital",
+  },
+  {
+    no: "06",
+    title: "Konsultasi & Solusi Digital",
+    text: "Ceritakan kebutuhan Anda. Kami bantu menentukan solusi yang realistis dan sesuai.",
+    href: "/layanan/konsultasi-solusi-digital",
+  },
+];
+
+const packages = [
+  {
+    tag: "UNTUK MEMULAI",
+    title: "Starter UMKM",
+    text: "Fondasi digital dasar untuk usaha yang baru mulai.",
+    items: [
+      "Logo sederhana",
+      "QRIS usaha",
+      "Google Business Profile",
+      "Optimasi WhatsApp Business",
+    ],
+  },
+  {
+    tag: "UNTUK TAMPIL",
+    title: "Branding Usaha",
+    text: "Buat identitas dan materi promosi usaha lebih rapi.",
+    items: [
+      "Logo / penyegaran identitas",
+      "Flyer promosi",
+      "Banner",
+      "Menu / daftar harga",
+    ],
+    featured: true,
+  },
+  {
+    tag: "UNTUK ONLINE",
+    title: "Go Online",
+    text: "Bantu usaha lebih mudah ditemukan dan dihubungi pelanggan.",
+    items: [
+      "Google Business Profile",
+      "WhatsApp Business",
+      "Katalog digital",
+      "Landing page",
+    ],
   },
 ];
 
 const portfolio = [
-  { title: 'QRIS UMKM', category: 'Digitalisasi UMKM', icon: '▦' },
-  { title: 'Sistem Kasir', category: 'POS / Kasir', icon: '▣' },
-  { title: 'Excel Penjualan', category: 'Pencatatan Usaha', icon: '▤' },
+  ["Branding & Logo", "Identitas usaha, komunitas, dan organisasi."],
+  ["Flyer & Promosi", "Flyer, banner, menu, daftar harga, dan materi promosi."],
+  ["Website & Form Online", "Website usaha, landing page, formulir, dan halaman event."],
+  ["Administrasi", "Stok, rekap, invoice, pencatatan, dan dokumen usaha."],
+  ["QRIS & Digitalisasi", "Materi QRIS serta kebutuhan digital dasar usaha."],
+  ["Event & Organisasi", "Poster, tiket, sertifikat, banner, dan kebutuhan kegiatan."],
 ];
-
-function Arrow() { return <span aria-hidden>→</span>; }
 
 export default function Home() {
   return (
-    <main>
-   <header className="site-header">
-  <div className="container nav-wrap">
+    <>
+      <header className="header">
+        <div className="container header-inner">
+          <a href="#home" className="brand">
+            <span className="brand-logo">
+              <img src="/logo-batara.jpg" alt="Batara Project" />
+            </span>
+            <span className="brand-copy">
+              <strong>BATARA PROJECT</strong>
+              <small>Partner Digital untuk Pengembangan Usaha</small>
+            </span>
+          </a>
 
-    <a href="/" className="brand">
-      <img
-        src="/logo-batara.jpg"
-        alt="Batara Project"
-        className="brand-logo"
-      />
+          <nav className="nav">
+            <a href="#home">Beranda</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#paket">Paket</a>
+            <a href="#portofolio">Portofolio</a>
+            <a href="#tentang">Tentang</a>
+          </nav>
 
-      <div className="brand-info">
-        <strong>BATARA PROJECT</strong>
-        <small>Partner Digital untuk Pengembangan Usaha</small>
-      </div>
-    </a>
-
-    <nav className="nav-links">
-      <a href="/" className="active">Beranda</a>
-      <a href="/#layanan">Layanan</a>
-      <a href="/#tentang">Tentang Kami</a>
-      <a href="/#portofolio">Portofolio</a>
-    </nav>
-
-    <a
-      href="https://wa.me/6285724159878"
-      className="nav-cta"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Konsultasi ↗
-    </a>
-
-    <button className="mobile-menu" aria-label="Buka menu">
-      ☰
-    </button>
-
-  </div>
-</header>
-
-      <section id="top" className="hero">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <span className="eyebrow">Partner Digital untuk Pengembangan Usaha</span>
-            <h1>Solusi Digital untuk <span>Usaha yang Lebih Maju.</span></h1>
-            <p>Batara Project membantu usaha mengelola dan mengembangkan bisnis melalui layanan digital yang praktis, terpercaya, dan sesuai kebutuhan.</p>
-            <div className="hero-actions">
-              <a className="btn primary" href="#layanan">Lihat Layanan <Arrow /></a>
-              <a className="btn secondary" href="https://wa.me/6285724159878?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noreferrer">Konsultasi via WhatsApp</a>
-            </div>
-            <div className="trust-row">
-              <div><b>✓</b><span><strong>Solusi Tepat</strong><small>Sesuai kebutuhan usaha</small></span></div>
-              <div><b>✓</b><span><strong>Proses Mudah</strong><small>Pendampingan penuh</small></span></div>
-              <div><b>✓</b><span><strong>Terpercaya</strong><small>Partner bisnis Anda</small></span></div>
-            </div>
-          </div>
-          <div className="hero-visual" aria-label="Ilustrasi layanan digital">
-            <div className="glow" />
-            <div className="device laptop"><div className="screen"><div className="screen-title">Dashboard Usaha</div><div className="chart"><i/><i/><i/><i/><i/><i/></div><div className="mini-lines"><i/><i/><i/></div></div></div>
-            <div className="device phone"><div className="phone-screen"><div className="phone-top"/><div className="phone-card">PPOB<br/><b>Rp 1.250.000</b></div><div className="phone-card">Transaksi<br/><b>124</b></div></div></div>
-            <div className="qris-card"><div className="qris-label">QRIS</div><div className="qr">▦</div><small>BATARA PROJECT</small></div>
-            <div className="receipt" />
-          </div>
+          <a href="#kontak" className="header-cta">Konsultasi</a>
         </div>
-      </section>
+      </header>
 
-      <section id="layanan" className="section services-section">
-        <div className="container">
-          <div className="section-head center"><span className="eyebrow">LAYANAN KAMI</span><h2>Tiga Fokus Layanan Kami</h2><p>Kami fokus pada kebutuhan digital yang benar-benar dibutuhkan usaha untuk bertumbuh.</p></div>
-          <div className="service-grid">
-            {services.map((service) => (
-              <article className={`service-card ${service.tone}`} key={service.number}>
-                <div className="service-top"><span className="service-number">{service.number}</span><span className="service-icon">✦</span></div>
-                <h3>{service.title}</h3><p>{service.text}</p>
-                <ul>{service.items.map((item) => <li key={item}>{item}</li>)}</ul>
-                <a href={`/layanan/${service.slug}`}>Pelajari Selengkapnya <Arrow /></a>
+      <main>
+        <section className="hero" id="home">
+          <div className="container hero-grid">
+            <div className="hero-copy">
+              <span className="kicker">
+                <i />
+                SOLUSI DIGITAL UNTUK USAHA
+              </span>
+
+              <h1>
+                Bantu usaha Anda tampil
+                <span> lebih profesional.</span>
+              </h1>
+
+              <p>
+                Batara Project membantu UMKM, usaha lokal, komunitas, dan pelaku
+                usaha melalui desain, digitalisasi, website, promosi, dan
+                administrasi yang praktis.
+              </p>
+
+              <div className="hero-actions">
+                <a href="#layanan" className="btn btn-primary">Pilih Layanan</a>
+                <a href="/checkout" className="btn btn-outline">Lihat Checkout</a>
+              </div>
+
+              <div className="hero-meta">
+                <span><b>✓</b> Bisa mulai dari satu layanan</span>
+                <span><b>✓</b> Disesuaikan dengan kebutuhan</span>
+              </div>
+            </div>
+
+            <div className="hero-panel">
+              <div className="panel-head">
+                <div>
+                  <span>BATARA PROJECT</span>
+                  <h2>Mulai dari kebutuhan yang paling penting.</h2>
+                </div>
+                <em>Praktis</em>
+              </div>
+
+              <div className="panel-grid">
+                <a href="/layanan/desain-branding">
+                  <span>01</span>
+                  <strong>Branding</strong>
+                  <small>Logo & materi usaha</small>
+                </a>
+
+                <a href="/layanan/digitalisasi-umkm">
+                  <span>02</span>
+                  <strong>Digitalisasi</strong>
+                  <small>QRIS, Maps & WhatsApp</small>
+                </a>
+
+                <a href="/layanan/website-landing-page">
+                  <span>03</span>
+                  <strong>Website</strong>
+                  <small>Profil & landing page</small>
+                </a>
+
+                <a href="/layanan/administrasi-usaha">
+                  <span>04</span>
+                  <strong>Administrasi</strong>
+                  <small>Stok, rekap & dokumen</small>
+                </a>
+              </div>
+
+              <div className="panel-foot">
+                <div>
+                  <strong>Belum tahu mulai dari mana?</strong>
+                  <span>Ceritakan kebutuhan usaha Anda.</span>
+                </div>
+                <a href="/layanan/konsultasi-solusi-digital">Mulai →</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="container process-bar">
+            <div>
+              <span>01</span>
+              <strong>Pilih layanan</strong>
+              <small>Lihat rincian jasa yang tersedia.</small>
+            </div>
+            <div>
+              <span>02</span>
+              <strong>Pilih jasa</strong>
+              <small>Masukkan kebutuhan ke checkout.</small>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>Kirim permintaan</strong>
+              <small>Isi data dan kebutuhan proyek.</small>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-white" id="layanan">
+          <div className="container">
+            <div className="section-head">
+              <div>
+                <span className="section-tag">LAYANAN BATARA PROJECT</span>
+                <h2>Satu partner untuk berbagai kebutuhan digital usaha.</h2>
+              </div>
+              <p>
+                Pilih sesuai kebutuhan. Tidak perlu mengambil semuanya sekaligus.
+              </p>
+            </div>
+
+            <div className="service-grid">
+              {services.map((service) => (
+                <article className="service-card" key={service.no}>
+                  <div className="service-no">{service.no}</div>
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
+                  <a href={service.href}>Lihat Rincian Jasa →</a>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-soft">
+          <div className="container problem-grid">
+            <div className="problem-intro">
+              <span className="section-tag">MULAI DARI KONDISI ANDA</span>
+              <h2>Tidak semua usaha membutuhkan solusi yang sama.</h2>
+              <p>
+                Kami bantu menentukan titik awal yang paling masuk akal untuk
+                kondisi usaha Anda saat ini.
+              </p>
+              <a href="/layanan/konsultasi-solusi-digital">
+                Konsultasikan Kebutuhan →
+              </a>
+            </div>
+
+            <div className="problem-list">
+              <article>
+                <span>01</span>
+                <div>
+                  <h3>Baru memulai usaha</h3>
+                  <p>Bangun identitas, QRIS, Google Business, WhatsApp, dan materi promosi dasar.</p>
+                </div>
               </article>
-            ))}
+              <article>
+                <span>02</span>
+                <div>
+                  <h3>Ingin terlihat lebih profesional</h3>
+                  <p>Rapikan branding, materi promosi, katalog, dan keberadaan online.</p>
+                </div>
+              </article>
+              <article>
+                <span>03</span>
+                <div>
+                  <h3>Administrasi masih berantakan</h3>
+                  <p>Buat stok, penjualan, rekap, invoice, dan dokumen kerja lebih sederhana.</p>
+                </div>
+              </article>
+              <article>
+                <span>04</span>
+                <div>
+                  <h3>Punya kebutuhan khusus</h3>
+                  <p>Ceritakan masalahnya. Kami bantu mencari solusi yang realistis dan sesuai.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-white" id="paket">
+          <div className="container">
+            <div className="section-head center">
+              <div>
+                <span className="section-tag">PAKET USAHA</span>
+                <h2>Pilihan praktis untuk kebutuhan yang paling umum.</h2>
+              </div>
+              <p>
+                Semua paket tetap fleksibel dan dapat disesuaikan dengan kebutuhan.
+              </p>
+            </div>
+
+            <div className="package-grid">
+              {packages.map((pkg) => (
+                <article
+                  className={`package-card ${pkg.featured ? "featured" : ""}`}
+                  key={pkg.title}
+                >
+                  <span className="package-tag">{pkg.tag}</span>
+                  <h3>{pkg.title}</h3>
+                  <p>{pkg.text}</p>
+
+                  <ul>
+                    {pkg.items.map((item) => (
+                      <li key={item}><span>✓</span>{item}</li>
+                    ))}
+                  </ul>
+
+                  <div className="package-bottom">
+                    <small>Harga menyesuaikan kebutuhan</small>
+                    <a href="/layanan/konsultasi-solusi-digital">
+                      Konsultasikan Paket →
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="single-banner">
+              <div>
+                <span>LAYANAN SATUAN</span>
+                <h3>Butuh satu layanan saja? Tidak harus mengambil paket.</h3>
+              </div>
+              <a href="#layanan" className="btn btn-outline">Pilih Layanan</a>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-soft" id="portofolio">
+          <div className="container">
+            <div className="section-head">
+              <div>
+                <span className="section-tag">PORTOFOLIO</span>
+                <h2>Hasil nyata akan menjadi bukti utama Batara Project.</h2>
+              </div>
+              <p>
+                Bagian ini nanti kita isi dengan hasil pekerjaan asli, bukan
+                gambar stok.
+              </p>
+            </div>
+
+            <div className="portfolio-grid">
+              {portfolio.map(([title, desc], index) => (
+                <article className="portfolio-card" key={title}>
+                  <div className={`portfolio-art art-${index + 1}`}>
+                    <span>BATARA PROJECT</span>
+                    <b>{String(index + 1).padStart(2, "0")}</b>
+                  </div>
+                  <div className="portfolio-copy">
+                    <h3>{title}</h3>
+                    <p>{desc}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-white">
+          <div className="container why-grid">
+            <div>
+              <span className="section-tag">KENAPA BATARA PROJECT?</span>
+              <h2>Lebih sederhana dalam proses, lebih berguna dalam hasil.</h2>
+            </div>
+
+            <div className="why-cards">
+              <article>
+                <span>01</span>
+                <h3>Sesuai kebutuhan</h3>
+                <p>Tidak memaksakan layanan yang sebenarnya tidak dibutuhkan.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Mudah dipahami</h3>
+                <p>Dibuat untuk pengguna sehari-hari, bukan hanya orang teknis.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Fleksibel</h3>
+                <p>Bisa satu layanan, paket, maupun kebutuhan khusus.</p>
+              </article>
+              <article>
+                <span>04</span>
+                <h3>Pendampingan</h3>
+                <p>Dibantu dari konsultasi hingga hasil siap digunakan.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="section about" id="tentang">
+          <div className="container about-grid">
+            <div className="about-logo-wrap">
+              <span className="about-logo">
+                <img src="/logo-batara.jpg" alt="Batara Project" />
+              </span>
+            </div>
+
+            <div className="about-copy">
+              <span className="section-tag">TENTANG BATARA PROJECT</span>
+              <h2>Digitalisasi tidak harus rumit atau mahal.</h2>
+              <p>
+                Batara Project membantu UMKM, usaha lokal, komunitas, dan
+                berbagai kegiatan memanfaatkan teknologi dengan cara yang
+                sederhana, praktis, dan sesuai kebutuhan.
+              </p>
+              <p>
+                Kami percaya solusi yang baik adalah solusi yang benar-benar
+                dipakai dan membantu pekerjaan sehari-hari.
+              </p>
+              <strong>Partner Digital untuk Pengembangan Usaha.</strong>
+            </div>
+          </div>
+        </section>
+
+        <section className="cta" id="kontak">
+          <div className="container cta-grid">
+            <div>
+              <span>KONSULTASI AWAL</span>
+              <h2>Belum yakin layanan mana yang dibutuhkan?</h2>
+              <p>
+                Mulai dari halaman konsultasi. Jelaskan masalah atau tujuan usaha
+                Anda, lalu pilih kebutuhan yang paling relevan.
+              </p>
+            </div>
+
+            <div className="cta-box">
+              <a
+                href="/layanan/konsultasi-solusi-digital"
+                className="btn btn-light"
+              >
+                Mulai Konsultasi
+              </a>
+              <small>
+                Tidak harus langsung memesan semua layanan.
+              </small>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="footer">
+        <div className="container footer-grid">
+          <div className="footer-brand">
+            <span className="footer-logo">
+              <img src="/logo-batara.jpg" alt="Batara Project" />
+            </span>
+            <div>
+              <strong>BATARA PROJECT</strong>
+              <p>Partner Digital untuk Pengembangan Usaha</p>
+            </div>
+          </div>
+
+          <div className="footer-links">
+            <strong>Layanan</strong>
+            <a href="/layanan/digitalisasi-umkm">Digitalisasi UMKM</a>
+            <a href="/layanan/desain-branding">Desain & Branding</a>
+            <a href="/layanan/website-landing-page">Website</a>
+            <a href="/layanan/administrasi-usaha">Administrasi</a>
+          </div>
+
+          <div className="footer-links">
+            <strong>Navigasi</strong>
+            <a href="#home">Beranda</a>
+            <a href="#paket">Paket</a>
+            <a href="#portofolio">Portofolio</a>
+            <a href="/checkout">Checkout</a>
           </div>
         </div>
-      </section>
 
-      <section className="stats">
-        <div className="container stats-grid">
-          <div><strong>100+</strong><span>Mitra & Pelanggan</span></div>
-          <div><strong>200+</strong><span>Project & Solusi</span></div>
-          <div><strong>3+</strong><span>Tahun Pengalaman</span></div>
-          <div><strong>100%</strong><span>Komitmen & Support</span></div>
+        <div className="container footer-bottom">
+          <span>© 2026 Batara Project</span>
+          <span>Partner Digital untuk Pengembangan Usaha</span>
         </div>
-      </section>
-
-      <section id="tentang" className="section about-section">
-        <div className="container about-grid">
-          <div><span className="eyebrow">KENAPA BATARA PROJECT?</span><h2>Kami Membantu, Bukan Hanya Menjual Produk.</h2><p className="lead">Kami memahami kebutuhan usaha terlebih dahulu, lalu membantu memilih solusi yang paling masuk akal.</p><a className="btn secondary" href="#kontak">Tentang Kami <Arrow /></a></div>
-          <div className="benefits">
-            {['Fokus Pada Kebutuhan', 'Dapat Dikembangkan', 'Praktis & Mudah Digunakan', 'Terhubung dengan Partner', 'Pendampingan Penuh'].map((x) => <div className="benefit" key={x}><span>✓</span><div><strong>{x}</strong><p>Solusi dirancang agar mudah dipahami dan digunakan oleh usaha.</p></div></div>)}
-          </div>
-        </div>
-      </section>
-
-      <section id="portfolio" className="section portfolio-section">
-        <div className="container"><div className="section-head"><span className="eyebrow">PORTFOLIO KAMI</span><h2>Beberapa Hasil Pekerjaan Kami</h2></div>
-          <div className="portfolio-grid">{portfolio.map((item) => <article className="portfolio-card" key={item.title}><div className="portfolio-art"><span>{item.icon}</span></div><small>{item.category}</small><h3>{item.title}</h3><a href="#detail">Lihat Detail <Arrow /></a></article>)}</div>
-          <a className="all-link" href="#detail">Lihat Semua Portfolio <Arrow /></a>
-        </div>
-      </section>
-
-      <section id="kontak" className="cta-section"><div className="container cta"><div><span className="cta-bubble">✦</span><div><h2>Punya kebutuhan untuk usaha Anda?</h2><p>Ceritakan kebutuhan Anda. Kami siap membantu menemukan solusi yang sesuai.</p></div></div><a className="btn whatsapp" href="https://wa.me/6280000000000?text=Halo%20Batara%20Project%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noreferrer">Konsultasi via WhatsApp</a></div></section>
-
-      <footer className="footer"><div className="container footer-grid"><div><a className="brand footer-brand" href="#top"><span className="brand-mark">B</span><span><strong>BATARA PROJECT</strong><small>Partner Digital untuk Pengembangan Usaha</small></span></a><p>Solusi digital untuk membantu usaha berkembang lebih mudah dan terarah.</p></div><div><h4>Layanan</h4><a href="#layanan">Pulsa & PPOB</a><a href="#layanan">Digitalisasi UMKM</a><a href="#layanan">Layanan Aplikasi</a></div><div><h4>Informasi</h4><a href="#tentang">Tentang Kami</a><a href="#portfolio">Portfolio</a><a href="#kontak">Kontak</a></div><div><h4>Hubungi</h4><a href="#kontak">WhatsApp</a><a href="#kontak">Email</a></div></div><div className="container footer-bottom">© 2026 Batara Project. Semua hak dilindungi.</div></footer>
-    </main>
+      </footer>
+    </>
   );
 }

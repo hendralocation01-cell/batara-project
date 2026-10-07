@@ -1,0 +1,574 @@
+.container {
+  width: min(calc(100% - 40px), 1160px);
+  margin-inline: auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #dce7f1;
+}
+
+.headerInner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+}
+
+.brandLogo {
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+  border-radius: 50%;
+  flex: 0 0 46px;
+}
+
+.brandLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand > span:last-child {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.12;
+}
+
+.brand strong {
+  color: #10243d;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 12px;
+}
+
+.brand small {
+  margin-top: 3px;
+  color: #6a7c90;
+  font-size: 9px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.backLink {
+  color: #536a81;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cartButton {
+  min-height: 40px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 10px;
+  background: #10243d;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cartButton b {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #e4ad42;
+  color: #10243d;
+  font-size: 9px;
+}
+
+.main {
+  background: #f8fbfe;
+  color: #21384f;
+}
+
+.hero {
+  padding: 78px 0;
+  background:
+    radial-gradient(circle at 80% 25%, rgba(44,143,232,.1), transparent 26%),
+    linear-gradient(180deg, #ffffff 0%, #f5faff 100%);
+  border-bottom: 1px solid #dce7f1;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.kicker,
+.sectionLabel,
+.panelLabel {
+  display: block;
+  color: #166dcc;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .09em;
+}
+
+.hero h1,
+.sectionHead h2,
+.simpleHead h2,
+.faqLayout h2 {
+  color: #10243d;
+  font-family: "Manrope", Arial, sans-serif;
+  letter-spacing: -.04em;
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin-top: 13px;
+  font-size: clamp(40px, 4.5vw, 59px);
+  line-height: 1.08;
+}
+
+.heroGrid > div:first-child > p {
+  max-width: 680px;
+  margin-top: 20px;
+  color: #6a7c90;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 48px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.primaryButton {
+  background: #166dcc;
+  color: white;
+}
+
+.secondaryButton {
+  background: white;
+  color: #10243d;
+  border: 1px solid #dce7f1;
+}
+
+.heroPanel {
+  padding: 28px;
+  border: 1px solid #d7e4ef;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 18px 45px rgba(27,69,110,.09);
+}
+
+.suitableGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.suitableGrid span {
+  padding: 8px 10px;
+  border: 1px solid #dbe8f2;
+  border-radius: 999px;
+  background: #f2f8fd;
+  color: #49627b;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.panelNote {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #dce7f1;
+}
+
+.panelNote strong {
+  color: #10243d;
+  font-size: 13px;
+}
+
+.panelNote p {
+  margin-top: 4px;
+  color: #6a7c90;
+  font-size: 11px;
+}
+
+.section,
+.softSection {
+  padding: 80px 0;
+}
+
+.section {
+  background: white;
+}
+
+.softSection {
+  background: #eef6fc;
+  border-block: 1px solid #dce9f4;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.sectionHead h2,
+.simpleHead h2,
+.faqLayout h2 {
+  margin-top: 10px;
+  font-size: clamp(30px, 3.5vw, 44px);
+  line-height: 1.14;
+}
+
+.sectionHeadAction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionHeadAction button {
+  border: 0;
+  background: transparent;
+  color: #166dcc;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sectionHeadAction span {
+  color: #6a7c90;
+  font-size: 10px;
+}
+
+.itemGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.itemCard {
+  min-height: 245px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid #dce7f1;
+  border-radius: 16px;
+  background: white;
+  cursor: pointer;
+  transition: .2s ease;
+  font: inherit;
+}
+
+.itemCard:hover {
+  transform: translateY(-2px);
+  border-color: #b7d0e6;
+}
+
+.itemCard.active {
+  border-color: #166dcc;
+  background: #f4f9ff;
+  box-shadow: inset 0 0 0 1px #166dcc;
+}
+
+.itemTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c9d9e7;
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.active .checkbox {
+  border-color: #166dcc;
+  background: #166dcc;
+}
+
+.chooseText {
+  color: #7a8da1;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+
+.itemCard h3 {
+  margin-top: 34px;
+  color: #10243d;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.itemCard p {
+  margin-top: 9px;
+  color: #6a7c90;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.checkoutBar {
+  position: sticky;
+  bottom: 16px;
+  z-index: 20;
+  margin-top: 24px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid #ceddea;
+  border-radius: 15px;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 36px rgba(25,64,102,.12);
+}
+
+.checkoutBar > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutBar span {
+  color: #166dcc;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.checkoutBar strong {
+  color: #10243d;
+  font-size: 13px;
+}
+
+.checkoutBar small {
+  color: #75879a;
+  font-size: 9px;
+}
+
+.checkoutBar button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #10243d;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.checkoutBar button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.simpleHead {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #ccdeed;
+  border-left: 1px solid #ccdeed;
+}
+
+.processGrid article {
+  min-height: 180px;
+  padding: 22px;
+  border-right: 1px solid #ccdeed;
+  border-bottom: 1px solid #ccdeed;
+}
+
+.processGrid span {
+  color: #e4ad42;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.processGrid h3 {
+  margin-top: 28px;
+  color: #10243d;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 16px;
+}
+
+.processGrid p {
+  margin-top: 7px;
+  color: #6a7c90;
+  font-size: 11px;
+}
+
+.faqLayout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 70px;
+}
+
+.faqLayout > div:first-child > p {
+  max-width: 430px;
+  margin-top: 12px;
+  color: #6a7c90;
+  font-size: 12px;
+}
+
+.faqList {
+  border-top: 1px solid #dce7f1;
+}
+
+.faqList details {
+  border-bottom: 1px solid #dce7f1;
+}
+
+.faqList summary {
+  padding: 18px 0;
+  color: #10243d;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faqList details p {
+  padding: 0 0 18px;
+  color: #6a7c90;
+  font-size: 12px;
+}
+
+.footer {
+  background: #081a2e;
+  color: white;
+}
+
+.footerInner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7f95a9;
+  font-size: 10px;
+}
+
+.footerInner a {
+  color: #a9d4fa;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 940px) {
+  .heroGrid,
+  .faqLayout {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .itemGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: min(calc(100% - 26px), 1160px);
+  }
+
+  .brand small,
+  .backLink {
+    display: none;
+  }
+
+  .hero {
+    padding: 55px 0;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .heroActions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .section,
+  .softSection {
+    padding: 62px 0;
+  }
+
+  .sectionHead {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .itemGrid,
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .itemCard {
+    min-height: 210px;
+  }
+
+  .checkoutBar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .checkoutBar button {
+    width: 100%;
+  }
+}
